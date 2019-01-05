@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,19 +17,19 @@ import java.util.List;
 
 public class ListaAlunosActivity extends AppCompatActivity {
 
-    private Button novoAluno;
+    private Button novooAluno;
     private ListView listaAlunos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_alunos);
-        novoAluno = (Button) findViewById(R.id.listaAlunos_btn_novoAluno);
+        novooAluno = (Button) findViewById(R.id.listaAlunos_btn_novoAluno);
         listaAlunos = (ListView) findViewById(R.id.lista_alunos);
 
         registerForContextMenu(listaAlunos); // Criando Menu de Contexto
 
-        novoAluno.setOnClickListener(new View.OnClickListener() {
+        novooAluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent formularioIntent = new Intent(ListaAlunosActivity.this, FormularioActivity.class);
